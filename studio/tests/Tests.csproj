@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>AnyPS5Studio.Tests</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\src\Core.cs" Link="Core.cs" />
+    <Compile Include="..\src\Scanner.cs" Link="Scanner.cs" />
+    <Compile Include="..\src\Sources.cs" Link="Sources.cs" />
+    <Compile Include="..\src\SelfUnwrapper.cs" Link="SelfUnwrapper.cs" />
+    <Compile Include="..\src\AppLog.cs" Link="AppLog.cs" />
+    <Compile Include="..\src\RunRecorder.cs" Link="RunRecorder.cs" />
+    <Compile Include="..\src\RunAnalyzer.cs" Link="RunAnalyzer.cs" />
+    <Compile Include="..\src\ConversionRecord.cs" Link="ConversionRecord.cs" />
+  </ItemGroup>
+</Project>

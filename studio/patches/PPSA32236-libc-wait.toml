@@ -1,0 +1,13 @@
+# EXPERIMENTAL, a guess and not a real fix. See AnyPS5 issue #12123.
+# The game's libc.prx waits through a raw syscall 454 whose PS5 behaviour hasn't
+# been measured. This makes the wait return at once, after a CPU pause, on the
+# assumption that callers recheck their condition after waking.
+format = 1
+
+[[patch]]
+name        = "libc_wait_returns_at_once"
+target      = "sce_module/libc.prx"
+va          = 0x116c82
+expected    = "31d20f05"
+value       = "f39031c0"
+description = "experimental: replace the raw _umtx_op wait with pause and return 0"
